@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<circuit>
+<version>2</version>
+<attributes/>
+<visualElements>
+<visualElement><elementName>ExternalFile</elementName><elementAttributes><entry><string>applicationType</string><appType>GHDL</appType></entry><entry><string>ghdlOptions</string><string>--std=08 --ieee=synopsys</string></entry><entry><string>Label</string><string>riscv_cpu</string></entry><entry><string>externalInputs</string><string>clk_i,reset_i,load_enable_i,imem_data_i:32,dmem_rdata_i:32,reg_sel_i:5</string></entry><entry><string>externalOutputs</string><string>imem_addr_o:32,dmem_addr_o:32,dmem_wdata_o:32,dmem_we_o,pc_debug_o:32,instr_debug_o:32,alu_result_debug_o:32,reg_debug_o:32,hazard_stall_o,hazard_flush_o</string></entry><entry><string>Width</string><int>15</int></entry><entry><string>CodeFile</string><file>riscv_cpu.vhd</file></entry></elementAttributes><pos x="0" y="0"/></visualElement>
+<visualElement><elementName>Tunnel</elementName><elementAttributes><entry><string>NetName</string><string>clk</string></entry></elementAttributes><pos x="0" y="0"/></visualElement>
+<visualElement><elementName>Tunnel</elementName><elementAttributes><entry><string>NetName</string><string>reset</string></entry></elementAttributes><pos x="0" y="20"/></visualElement>
+<visualElement><elementName>Tunnel</elementName><elementAttributes><entry><string>NetName</string><string>load_en</string></entry></elementAttributes><pos x="0" y="40"/></visualElement>
+<visualElement><elementName>Tunnel</elementName><elementAttributes><entry><string>NetName</string><string>imem_data</string></entry></elementAttributes><pos x="0" y="60"/></visualElement>
+<visualElement><elementName>Tunnel</elementName><elementAttributes><entry><string>NetName</string><string>dmem_rdata</string></entry></elementAttributes><pos x="0" y="80"/></visualElement>
+<visualElement><elementName>Tunnel</elementName><elementAttributes><entry><string>NetName</string><string>reg_sel</string></entry></elementAttributes><pos x="0" y="100"/></visualElement>
+<visualElement><elementName>Tunnel</elementName><elementAttributes><entry><string>NetName</string><string>imem_addr</string></entry></elementAttributes><pos x="300" y="0"/></visualElement>
+<visualElement><elementName>Tunnel</elementName><elementAttributes><entry><string>NetName</string><string>dmem_addr</string></entry></elementAttributes><pos x="300" y="20"/></visualElement>
+<visualElement><elementName>Tunnel</elementName><elementAttributes><entry><string>NetName</string><string>dmem_wdata</string></entry></elementAttributes><pos x="300" y="40"/></visualElement>
+<visualElement><elementName>Tunnel</elementName><elementAttributes><entry><string>NetName</string><string>dmem_we</string></entry></elementAttributes><pos x="300" y="60"/></visualElement>
+<visualElement><elementName>Tunnel</elementName><elementAttributes><entry><string>NetName</string><string>pc_debug</string></entry></elementAttributes><pos x="300" y="80"/></visualElement>
+<visualElement><elementName>Tunnel</elementName><elementAttributes><entry><string>NetName</string><string>instr_debug</string></entry></elementAttributes><pos x="300" y="100"/></visualElement>
+<visualElement><elementName>Tunnel</elementName><elementAttributes><entry><string>NetName</string><string>alu_debug</string></entry></elementAttributes><pos x="300" y="120"/></visualElement>
+<visualElement><elementName>Tunnel</elementName><elementAttributes><entry><string>NetName</string><string>reg_debug</string></entry></elementAttributes><pos x="300" y="140"/></visualElement>
+<visualElement><elementName>Tunnel</elementName><elementAttributes><entry><string>NetName</string><string>hz_stall</string></entry></elementAttributes><pos x="300" y="160"/></visualElement>
+<visualElement><elementName>Tunnel</elementName><elementAttributes><entry><string>NetName</string><string>hz_flush</string></entry></elementAttributes><pos x="300" y="180"/></visualElement>
+<visualElement><elementName>Clock</elementName><elementAttributes><entry><string>Label</string><string>CLOCK</string></entry></elementAttributes><pos x="-220" y="0"/></visualElement>
+<visualElement><elementName>Tunnel</elementName><elementAttributes><entry><string>NetName</string><string>clk</string></entry></elementAttributes><pos x="-220" y="0"/></visualElement>
+<visualElement><elementName>In</elementName><elementAttributes><entry><string>Label</string><string>RESET</string></entry></elementAttributes><pos x="-220" y="60"/></visualElement>
+<visualElement><elementName>Tunnel</elementName><elementAttributes><entry><string>NetName</string><string>reset</string></entry></elementAttributes><pos x="-220" y="60"/></visualElement>
+<visualElement><elementName>In</elementName><elementAttributes><entry><string>Label</string><string>LOAD_ENABLE</string></entry></elementAttributes><pos x="-220" y="120"/></visualElement>
+<visualElement><elementName>Tunnel</elementName><elementAttributes><entry><string>NetName</string><string>load_en</string></entry></elementAttributes><pos x="-220" y="120"/></visualElement>
+<visualElement><elementName>In</elementName><elementAttributes><entry><string>Label</string><string>REG_SEL</string></entry><entry><string>Bits</string><int>5</int></entry></elementAttributes><pos x="-220" y="180"/></visualElement>
+<visualElement><elementName>Tunnel</elementName><elementAttributes><entry><string>NetName</string><string>reg_sel</string></entry></elementAttributes><pos x="-220" y="180"/></visualElement>
+<visualElement><elementName>ROM</elementName><elementAttributes><entry><string>AddrBits</string><int>8</int></entry><entry><string>Label</string><string>ROM_INSTR</string></entry><entry><string>Bits</string><int>32</int></entry><entry><string>Data</string><data>a00093,1400113,193,208233,1202b3,40228333,20f3b3,20e433,20c4b3,41a023,51a223,61a423,1a503,1505b3,41a603,81a683,d60733,108663,ff00793,ff00813,100793,1463,200813,300893,63</data></entry></elementAttributes><pos x="640" y="-120"/></visualElement>
+<visualElement><elementName>Tunnel</elementName><elementAttributes><entry><string>NetName</string><string>rom_addr</string></entry></elementAttributes><pos x="640" y="-120"/></visualElement>
+<visualElement><elementName>Tunnel</elementName><elementAttributes><entry><string>NetName</string><string>load_en</string></entry></elementAttributes><pos x="640" y="-80"/></visualElement>
+<visualElement><elementName>Tunnel</elementName><elementAttributes><entry><string>NetName</string><string>imem_data</string></entry></elementAttributes><pos x="700" y="-100"/></visualElement>
+<visualElement><elementName>Splitter</elementName><elementAttributes><entry><string>Input Splitting</string><string>32</string></entry><entry><string>Output Splitting</string><string>2,8,22</string></entry></elementAttributes><pos x="460" y="-20"/></visualElement>
+<visualElement><elementName>Tunnel</elementName><elementAttributes><entry><string>NetName</string><string>imem_addr</string></entry></elementAttributes><pos x="460" y="-20"/></visualElement>
+<visualElement><elementName>Tunnel</elementName><elementAttributes><entry><string>NetName</string><string>rom_addr</string></entry></elementAttributes><pos x="480" y="0"/></visualElement>
+<visualElement><elementName>RAMDualPort</elementName><elementAttributes><entry><string>AddrBits</string><int>8</int></entry><entry><string>Bits</string><int>32</int></entry><entry><string>Label</string><string>RAM_DADOS</string></entry></elementAttributes><pos x="640" y="140"/></visualElement>
+<visualElement><elementName>Tunnel</elementName><elementAttributes><entry><string>NetName</string><string>ram_addr</string></entry></elementAttributes><pos x="640" y="140"/></visualElement>
+<visualElement><elementName>Tunnel</elementName><elementAttributes><entry><string>NetName</string><string>dmem_wdata</string></entry></elementAttributes><pos x="640" y="160"/></visualElement>
+<visualElement><elementName>Tunnel</elementName><elementAttributes><entry><string>NetName</string><string>dmem_we</string></entry></elementAttributes><pos x="640" y="180"/></visualElement>
+<visualElement><elementName>Tunnel</elementName><elementAttributes><entry><string>NetName</string><string>clk</string></entry></elementAttributes><pos x="640" y="200"/></visualElement>
+<visualElement><elementName>Tunnel</elementName><elementAttributes><entry><string>NetName</string><string>load_en</string></entry></elementAttributes><pos x="640" y="220"/></visualElement>
+<visualElement><elementName>Tunnel</elementName><elementAttributes><entry><string>NetName</string><string>dmem_rdata</string></entry></elementAttributes><pos x="700" y="180"/></visualElement>
+<visualElement><elementName>Splitter</elementName><elementAttributes><entry><string>Input Splitting</string><string>32</string></entry><entry><string>Output Splitting</string><string>2,8,22</string></entry></elementAttributes><pos x="460" y="140"/></visualElement>
+<visualElement><elementName>Tunnel</elementName><elementAttributes><entry><string>NetName</string><string>dmem_addr</string></entry></elementAttributes><pos x="460" y="140"/></visualElement>
+<visualElement><elementName>Tunnel</elementName><elementAttributes><entry><string>NetName</string><string>ram_addr</string></entry></elementAttributes><pos x="480" y="160"/></visualElement>
+<visualElement><elementName>Out</elementName><elementAttributes><entry><string>Label</string><string>PC</string></entry><entry><string>Bits</string><int>32</int></entry></elementAttributes><pos x="1000" y="-120"/></visualElement>
+<visualElement><elementName>Tunnel</elementName><elementAttributes><entry><string>NetName</string><string>pc_debug</string></entry></elementAttributes><pos x="1000" y="-120"/></visualElement>
+<visualElement><elementName>Out</elementName><elementAttributes><entry><string>Label</string><string>INSTR</string></entry><entry><string>Bits</string><int>32</int></entry></elementAttributes><pos x="1000" y="-60"/></visualElement>
+<visualElement><elementName>Tunnel</elementName><elementAttributes><entry><string>NetName</string><string>instr_debug</string></entry></elementAttributes><pos x="1000" y="-60"/></visualElement>
+<visualElement><elementName>Out</elementName><elementAttributes><entry><string>Label</string><string>ALU_RESULT</string></entry><entry><string>Bits</string><int>32</int></entry></elementAttributes><pos x="1000" y="0"/></visualElement>
+<visualElement><elementName>Tunnel</elementName><elementAttributes><entry><string>NetName</string><string>alu_debug</string></entry></elementAttributes><pos x="1000" y="0"/></visualElement>
+<visualElement><elementName>Out</elementName><elementAttributes><entry><string>Label</string><string>REG_DEBUG</string></entry><entry><string>Bits</string><int>32</int></entry></elementAttributes><pos x="1000" y="60"/></visualElement>
+<visualElement><elementName>Tunnel</elementName><elementAttributes><entry><string>NetName</string><string>reg_debug</string></entry></elementAttributes><pos x="1000" y="60"/></visualElement>
+<visualElement><elementName>Out</elementName><elementAttributes><entry><string>Label</string><string>HAZARD_STALL</string></entry></elementAttributes><pos x="1000" y="120"/></visualElement>
+<visualElement><elementName>Tunnel</elementName><elementAttributes><entry><string>NetName</string><string>hz_stall</string></entry></elementAttributes><pos x="1000" y="120"/></visualElement>
+<visualElement><elementName>Out</elementName><elementAttributes><entry><string>Label</string><string>HAZARD_FLUSH</string></entry></elementAttributes><pos x="1000" y="180"/></visualElement>
+<visualElement><elementName>Tunnel</elementName><elementAttributes><entry><string>NetName</string><string>hz_flush</string></entry></elementAttributes><pos x="1000" y="180"/></visualElement>
+</visualElements>
+<wires>
+
+</wires>
+<measurementOrdering/>
+</circuit>
